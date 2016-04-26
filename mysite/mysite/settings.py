@@ -52,6 +52,7 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'mysite.urls'
 
+import os.path
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -68,11 +69,8 @@ TEMPLATES = [
     },
 ]
 
-import os.path
 
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
-)
+
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
